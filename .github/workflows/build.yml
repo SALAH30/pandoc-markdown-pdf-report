@@ -17,7 +17,18 @@ jobs:
         uses: teatimeguest/setup-texlive-action@v3
         with:
           packages: |
-            scheme-basic
+            scheme-full
+            collection-mathscience
+            hyperref
+            microtype
+            koma-script
+            setspace
+            xcolor
+            adjustbox
+            fancyvrb
+            booktabs
+            texliveonfly
+            tex-gyre
             tipa
 
       - name: Generate the pdf
