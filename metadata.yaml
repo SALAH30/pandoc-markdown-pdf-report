@@ -1,0 +1,32 @@
+---
+titlepage: True
+
+documentclass: article
+papersize: a4
+lang: en-GB
+geometry: margin=1in
+fontsize: 12pt
+toc: true
+toc-depth: 4
+lof: false
+colorlinks: True
+secnumdepth: 4
+numbersections: True
+
+pandoc-latex-admonition:
+  - color: Gray
+    classes: [admonition]
+  - color: Gray
+    classes: [input]
+  - color: LightBlue
+    classes: [output]
+pandoc-latex-tip:
+  - classes: [input]
+    icons: [{name: python, color: Gray, collection: fontawesome, version: 5.x, variant: brands}]
+  - classes: [output]
+    icons: [{name: comment, color: LightBlue}]
+header-includes:
+  - \usepackage{needspace}
+  - \usepackage{pbox}
+---
+

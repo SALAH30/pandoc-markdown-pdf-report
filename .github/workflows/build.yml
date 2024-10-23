@@ -1,0 +1,29 @@
+name: Markdown Pandoc PDF generator
+on: [push]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      
+      - name: Install Pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 2.19
+      
+      - name: Install texlive
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: |
+            tipa
+
+      - name: Generate the pdf
+        run: make
+
+      - name: Archive pdf 
+        uses: actions/upload-artifact@v4
+        with:
+          name: markdown-pandoc-pdf
+          path: build/report.pdf

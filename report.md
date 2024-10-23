@@ -18,7 +18,6 @@ It is popular among developers, Github for exemple uses use Markdown for project
 If you want to use Markdwon as document format and need the output as a pdf HTML or even DOCX ? In this case you need a tool that make that conversion for you. 
 And that bring us to Pandoc.
 
-
 # What is Pandoc?
 
 Pandoc is a universal document converter that allows you to convert files from one format to another. 
@@ -36,23 +35,23 @@ Follow the instructions for your operating system.
 On debian/Ubuntu system, you can install it by downloading [pandoc](https://github.com/jgm/pandoc/releases/), then using the bash command:
 
 ~~~console
-$ dpkg -i \$DEB
+# dpkg -i $DEB
 ~~~
 
-where `\$DEB` is the path to the downloaded debian package.
+where `$DEB` is the path to the downloaded debian package.
 
 You need *rsvg-convert* if you have some svg files you want to convert them to pdf:
 
 ~~~console
-$ apt install librsvg2-bin
+# apt install librsvg2-bin
 ~~~
 
 You can also install the LaTeX eco-system, pandoc can convert latex from your markdown file.
 
 ~~~console
-$ apt install texlive-latex-base
-$ apt install texlive-lang-english texlive-latex-extra latexmk
-$ apt install texlive-fonts-recommended texlive-fonts-extra
+# apt install texlive-latex-base
+# apt install texlive-lang-english texlive-latex-extra latexmk
+# apt install texlive-fonts-recommended texlive-fonts-extra
 ~~~
 
 Finally, you can download some filters for the *pandoc* system:
@@ -88,6 +87,25 @@ This will help you to structure your report efficiently.
 | Item 1   | Item 2   | Item 3   |
 | Item 4   | Item 5   | Item 6   |
 
+### Code Blocks
+
+you can use code blocks to display code.
+
+```python
+print("Hello, World!")
+```
+replace the language with the language of the code you are writing.
+for example:
+
+```bash
+ls -al
+```
+
+or
+
+```javascript
+console.log("Hello, World!");
+```
 
 ### Styled text and Links 
 
@@ -98,7 +116,7 @@ You can also add **bold** text, *italic* text, and links like [this one](https:/
 
 use this syntax to add an image to your report: `![Aneo image](images/aneo.png)`
 
-<!-- ![Aneo image](images/aneo.png) -->
+![Aneo image](images/aneo.png)
 
 ### Footnotes
 
@@ -197,11 +215,10 @@ A pdf called `build/report.pdf` will be created.
 
 ## Github Actions
 
-You can use gitlab to generate the pdf.
+You can use GitHub Actions to generate the pdf.
 
 # Conclusion
 
 Writing a report using Markdown and Pandoc is efficient, lightweight, and highly flexible. With Markdown, you can focus on content without getting bogged down by formatting, and with Pandoc, you can easily convert that content into polished documents like PDFs, Word documents, or even web pages. By mastering these tools, you’ll be able to create professional reports quickly and easily.
 
 Happy writing!
-
