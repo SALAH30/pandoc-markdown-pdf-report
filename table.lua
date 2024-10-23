@@ -36,25 +36,5 @@ function Table(el)
     end
     return new_row
   end
-
-  -- if FORMAT == "latex" then
-  --   local rows = {}
-
-  --   for k,row in pairs(el.rows) do
-  --       rows[k] = convert_row(row)
-  --   end
-  --   return pandoc.Table(el.caption, el.aligns, el.widths, el.headers, rows)
-  -- end
-  if FORMAT == "latex" and el and el.rows then
-    local rows = {}
-    for k, row in pairs(el.rows) do
-      rows[k] = convert_row(row)
-    end
-    return pandoc.Table(el.caption, el.aligns, el.widths, el.headers, rows)
-  elseif FORMAT == "latex" then
-    -- Log an error or handle the case where the table doesn't have the expected structure
-    io.stderr:write("Warning: Table doesn't have the expected structure\n")
-    return el
-  end
 end
 

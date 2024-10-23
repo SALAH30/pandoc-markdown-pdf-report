@@ -88,7 +88,6 @@ This will help you to structure your report efficiently.
 | Item 1   | Item 2   | Item 3   |
 | Item 4   | Item 5   | Item 6   |
 
-
 ### Styled text and Links 
 
 You can also add **bold** text, *italic* text, and links like [this one](https://example.com).
@@ -98,7 +97,8 @@ You can also add **bold** text, *italic* text, and links like [this one](https:/
 
 use this syntax to add an image to your report: `![Aneo image](images/aneo.png)`
 
-<!-- ![Aneo image](images/aneo.png) -->
+
+![This is a logo of Aneo](images/aneo.png){width=80%}
 
 ### Footnotes
 
@@ -106,6 +106,25 @@ Here's a simple footnote[^1].
 
 [^1]: This is the footnote content.
 
+### Latex
+
+You can also use latex in your markdown file:
+
+- Latex table:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Header 1 & Header 2 & Header 3  \\ \hline
+Item 1   & Item 2 & Item 3  \\ \hline
+Item 4   & Item 5 & Item 6  \\ \hline
+\end{tabular}
+\end{table}
+
+- Latex math formula:
+
+$$ y = ax+ b $$
 
 
 ## Convert Markdown to PDF or DOCX with Pandoc
